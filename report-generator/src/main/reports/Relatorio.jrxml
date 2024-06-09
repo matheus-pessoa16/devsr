@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.3.final using JasperReports Library version 6.20.3-415f9428cffdb6805c6f85bbb29ebaf18813a2ab  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Relatorio" language="javascript" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2bcd8793-6373-4cf4-9333-b9ef42093380">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="nomeMae" class="java.lang.String"/>
+	<parameter name="logo" class="java.awt.Image"/>
+	<parameter name="dataAdmissao" class="java.lang.String"/>
+	<parameter name="cargo" class="java.lang.String"/>
+	<parameter name="cpf" class="java.lang.String"/>
+	<parameter name="dataNascimento" class="java.lang.String"/>
+	<parameter name="funcionarioImg" class="java.awt.Image"/>
+	<parameter name="linguagensProgramacao" class="java.lang.String"/>
+	<parameter name="remuneracao" class="java.lang.String"/>
+	<parameter name="matricula" class="java.lang.String"/>
+	<parameter name="nome" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="84" splitType="Stretch">
+			<image scaleImage="FillFrame" vAlign="Middle">
+				<reportElement x="10" y="12" width="160" height="60" uuid="b577f3c3-7e19-4582-a1e5-2a9b072cd04d"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="471" splitType="Stretch">
+			<image>
+				<reportElement x="10" y="10" width="280" height="280" uuid="48a7c517-13da-45af-9d94-071449902c35"/>
+				<imageExpression><![CDATA[$P{funcionarioImg}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="321" y="50" width="170" height="19" uuid="46d12f61-6f8c-4c42-8c97-10f7e19e2a85"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data de nascimento:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="20" width="100" height="19" uuid="b0fb2215-1fe0-4dd4-9d26-d288fbc5fad3"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="80" width="100" height="19" uuid="20029c62-f030-4c4f-acbb-772609c18fba"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Matrícula:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="110" width="100" height="19" uuid="dba060a5-4b12-4431-a131-1860a4fb49ec"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cargo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="230" width="160" height="19" uuid="118eb13d-8493-4047-8d63-23610039a638"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome da mãe:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="200" width="100" height="19" uuid="3c484003-f5b5-44bc-aaa2-64eb61cf0083"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CPF:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="170" width="170" height="19" uuid="cc3c6248-106b-41fb-b2a3-b8037ee16c60"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Data de admissão:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="321" y="140" width="150" height="19" uuid="c5487cc3-f7b5-4809-b3ae-0fc703c6d51e"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Remuneração:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="494" y="20" width="308" height="18" uuid="d915a046-6c87-4f21-9d3d-59bcab698295"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="50" width="308" height="18" uuid="4bde2f4d-e9c2-4e21-8a2d-7354144f6ed5"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dataNascimento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="80" width="308" height="18" uuid="26618d8f-a050-472e-bf7b-023d74cb0a83"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{matricula}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="110" width="308" height="18" uuid="d64d24fc-bd98-4720-9e2c-1b17fdae6036"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cargo}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="140" width="308" height="18" uuid="bc5ce3f5-4e42-4647-a46d-7e93a44d330b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{remuneracao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="170" width="308" height="18" uuid="de328cf1-02f8-4e3a-96eb-87a8de6a81d0"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dataAdmissao}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="200" width="308" height="18" uuid="0172c001-c5e5-44b0-9d81-da46cb74f265"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{cpf}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="494" y="231" width="308" height="18" uuid="6eaf650b-8678-4477-a087-2c5aa71b825b"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nomeMae}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="10" y="328" width="791" height="140" uuid="e6c51b2b-1b37-412e-8083-9a5e5f587200"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="302" width="256" height="26" uuid="7040a115-215c-4acd-9e7f-8f31a37d7e0d"/>
+				<textElement verticalAlignment="Middle">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Linguagens de programação]]></text>
+			</staticText>
+			<textField textAdjust="StretchHeight">
+				<reportElement x="20" y="338" width="771" height="121" uuid="c5d3e894-4895-4274-89d2-f9158753eecf"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{linguagensProgramacao}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+</jasperReport>
