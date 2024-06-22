@@ -14,14 +14,7 @@ public class FuncionarioFactory {
             Arrays.asList("Java", "Python", "Javascript", "C", "SQL"),
             "matheus.jpeg"
             );
-        } else if(nome.equals("marcel")) {
-            return new Funcionario("Marcel Garcia", 
-            LocalDate.of(1980, 5, 1), "2023456789", "Tech Lead", 
-            10000.0, LocalDate.of(2020, 1, 1), "345.345.345-00", "Mãe de Marcel", 
-            Arrays.asList("Java", "PHP", "Javascript", "C", "Ruby"),
-            "marcel.jpeg"
-            );
-        }
+        } 
 
         return new Funcionario();
     }

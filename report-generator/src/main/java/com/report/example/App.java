@@ -11,15 +11,8 @@ public class App
     {
         Funcionario funcionario1 = FuncionarioFactory.getFuncionario("matheus");
 
-        Funcionario funcionario2 = FuncionarioFactory.getFuncionario("marcel");
-
         Report reportFuncionario1 = convertFuncionarioToReport(funcionario1);
-
-        Report reportFuncionario2 = convertFuncionarioToReport(funcionario2);
-
-
         ReportGenerator.generateReport(reportFuncionario1);
-        ReportGenerator.generateReport(reportFuncionario2);
     }
 
     static Report convertFuncionarioToReport(Funcionario funcionario) {
