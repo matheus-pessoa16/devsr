@@ -55,6 +55,7 @@ def send_email(filename,date, mvrv):
     finally:
         os.remove(filename)
 
+
 def get_bitcoin_data():
     url = "https://www.lookintobitcoin.com/django_plotly_dash/app/mvrv_zscore/_dash-update-component"
 
@@ -91,6 +92,10 @@ def get_bitcoin_data():
     
     content = content['data'][7]
 
+    return content
+
+
+def plot_graph(content):
     x_data = content['x']
     y_data = content['y']
 
@@ -105,7 +110,7 @@ def get_bitcoin_data():
     df['DATE'] = df['DATE'].dt.strftime('%d/%m/%Y')
 
     sns.lineplot(df,x="DATE", y="MVRV" ,palette="tab10", linewidth=2)
-    plt.xticks(rotation = 60) # Rotates X-Axis Ticks by 45-degrees
+    plt.xticks(rotation = 60) # Rotates X-Axis Ticks by 60-degrees
 
     filename = f"mvrv-{datetime.datetime.now().strftime('%d-%m-%Y')}.png"
     plt.savefig(filename)
@@ -113,9 +118,14 @@ def get_bitcoin_data():
     return filename, format_date(x_data_cpy[0]), y_data_cpy[0]
 
 
+def get_data_and_plot():
+    response = get_bitcoin_data()
+    return plot_graph(response)
+
+
 @app.get("/getPrice")
 def read_root():
-    filename, date, mvrv = get_bitcoin_data()
+    filename, date, mvrv = get_data_and_plot()
     print(filename, date, mvrv)
 
     send_email(filename, date, mvrv)
