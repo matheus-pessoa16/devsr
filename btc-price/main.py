@@ -6,7 +6,6 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 import smtplib
-import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.image import MIMEImage 
@@ -28,8 +27,8 @@ def format_date(date_str):
 
 
 def send_email(filename,date, mvrv):
-    sender_email = "matheus.pessoa16@gmail.com"
-    receiver_email = "matheus.pessoa16@gmail.com"
+    sender_email = "seuemail@gmail.com"
+    receiver_email = "seuemail@gmail.com"
 
     msg = MIMEMultipart()
     msg['Subject'] = 'Bitcoin Analysis!'
@@ -48,7 +47,7 @@ def send_email(filename,date, mvrv):
       with smtplib.SMTP('smtp.gmail.com', 587) as smtpObj:
         smtpObj.ehlo()
         smtpObj.starttls()
-        smtpObj.login("matheus.pessoa16@gmail.com", "imubpsounyrxxabz")
+        smtpObj.login("seuemail@gmail.com", "senha_do_app")
         smtpObj.sendmail(sender_email, receiver_email, msg.as_string())
     except Exception as e:
       print(e)
